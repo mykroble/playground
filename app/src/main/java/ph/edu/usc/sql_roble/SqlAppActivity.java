@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -14,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class SqlAppActivity extends AppCompatActivity {
     EditText username, password, delete_name, currentname, newname;
+    TextView display;
     Button addbtn, viewbtn, deletebtn, updatebtn;
     myDBAdapter helper;
 
@@ -32,7 +34,7 @@ public class SqlAppActivity extends AppCompatActivity {
         delete_name = findViewById(R.id.name_del);
         currentname = findViewById(R.id.current);
         newname = findViewById(R.id.newname);
-
+        display = findViewById(R.id.display);
         helper = new myDBAdapter(this);
 
         addbtn.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +47,12 @@ public class SqlAppActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 viewData(v);
+            }
+        });
+        deletebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deleteData(v); viewData(v);
             }
         });
     }
@@ -69,14 +77,25 @@ public class SqlAppActivity extends AppCompatActivity {
     }
     public void viewData(View view){
         String data = helper.getData();
-        Toast.makeText(getApplicationContext(),
-                data,
-                Toast.LENGTH_SHORT).show();
+        display.setText(data);
 
     }
 
     public void updateData(View view){}
-    public void deleteData(View view){}
+    public void deleteData(View view){
+        String uname = delete_name.getText().toString();
+        if (uname.isEmpty()){
+            Toast.makeText(getApplicationContext(), "Enter Data!", Toast.LENGTH_LONG).show();
+        } else{
+            int uuname = helper.deleteData(uname);
+            if (uuname <= 0){
+                Toast.makeText(getApplicationContext(), "Unsuccessful", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(getApplicationContext(), "Data has been deleted", Toast.LENGTH_LONG).show();
+        }
+
+        }
+    }
 }
 
 

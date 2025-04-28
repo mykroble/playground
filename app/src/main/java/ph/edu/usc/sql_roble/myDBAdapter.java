@@ -44,6 +44,14 @@ public class myDBAdapter {
         }
         return stringBuffer.toString();
     }
+
+    public int deleteData(String uname){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        String[] whereArgs = {uname};
+        int count = db.delete(myDBHelper.TABLE_NAME, myDBHelper.NAME+" =?", whereArgs);
+        return count;
+    }
+
     static class myDBHelper extends SQLiteOpenHelper {
 
         private Context context;
