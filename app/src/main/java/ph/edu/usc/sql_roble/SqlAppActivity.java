@@ -41,6 +41,12 @@ public class SqlAppActivity extends AppCompatActivity {
                 addUser(v);
             }
         });
+        viewbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewData(v);
+            }
+        });
     }
     public void addUser(View view){
         String name = username.getText().toString();
@@ -66,6 +72,7 @@ public class SqlAppActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),
                 data,
                 Toast.LENGTH_SHORT).show();
+
     }
 
     public void updateData(View view){}
