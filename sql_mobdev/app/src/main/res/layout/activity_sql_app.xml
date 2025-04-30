@@ -95,9 +95,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Update" />
-        <TextView
-            android:id="@+id/display"
+        <ListView
+            android:id="@+id/display_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

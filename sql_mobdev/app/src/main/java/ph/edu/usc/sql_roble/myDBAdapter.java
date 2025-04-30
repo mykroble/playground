@@ -12,9 +12,6 @@ import androidx.annotation.Nullable;
 public class myDBAdapter {
     myDBHelper dbHelper;
 
-
-
-
     public myDBAdapter(Context context) {
         dbHelper = new myDBHelper(context);
     }
@@ -27,7 +24,20 @@ public class myDBAdapter {
         long id = sqLiteDatabase.insert(dbHelper.TABLE_NAME, null, contentValues);
         return id;
     }
+    public int updateData(String name, String newname){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        String[] whereArgs = {name};
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(myDBHelper.NAME, newname);
+        int x = db.update(myDBHelper.TABLE_NAME, contentValues, myDBHelper.NAME + " =?", whereArgs);
 
+        return x;
+    }
+    public Cursor getAllData() {
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        String[] columns = {myDBHelper.UID, myDBHelper.NAME, myDBHelper.MyPASSWORD};
+        return db.query(myDBHelper.TABLE_NAME, columns, null, null, null, null, null);
+    }
     public String getData(){
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         String [] columns = {myDBHelper.UID, myDBHelper.NAME, myDBHelper.MyPASSWORD};
