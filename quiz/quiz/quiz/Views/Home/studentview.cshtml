@@ -1,0 +1,147 @@
+﻿@{
+    ViewData["Title"] = "Student Dashboard";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <style>
+
+        .container {
+            width: 90%;
+            height: 90%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .main {
+            flex: 1;
+            display: flex;
+        }
+
+        .left, .right {
+            flex: 1;
+            padding: 10px;
+        }
+        .right {
+            padding-top: 50px;
+        }
+
+        .left {
+            border-right: 1px solid #ddd;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Student</div>
+        <div class="main">
+            <!-- Available Quizzes -->
+            <div class="left">
+                <h3>Available Quizzes:</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Quiz Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="/Home/quiz">Heart</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Science Quiz</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">History Quiz</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Geography Quiz</a></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Taken Quizzes -->
+            <div class="right">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Quiz</th>
+                            <th>Score</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>Science Quiz</td>
+                            <td>85%</td>
+                            <td>2024-12-21 02:30 PM</td>
+                        </tr>
+                        <tr>
+                            <td>History Quiz</td>
+                            <td>70%</td>
+                            <td>2024-12-22 11:15 AM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="footer">
+            <button onclick="alert('Signing out...')">Sign Out</button>
+        </div>
+    </div>
+</body>
+</html>

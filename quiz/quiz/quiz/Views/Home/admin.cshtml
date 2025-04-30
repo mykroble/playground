@@ -1,0 +1,148 @@
+﻿@{
+    ViewData["Title"] = "Admin Panel";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <style>
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+/*            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);*/
+        }
+
+        .header {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .status-approved {
+            color: green;
+            font-weight: bold;
+        }
+
+        .status-pending {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .status-banned {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">ADMIN</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>As</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Fake data -->
+                <tr>
+                    <td>johndoe@example.com</td>
+                    <td>Teacher</td>
+                    <td>
+                        <select>
+                            <option>Pending</option>
+                            <option>Approved</option>
+                            <option>Banned</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>JaneSmith@example.com</td>
+                    <td>Student</td>
+                    <td>
+                        <select>
+                            <option>Approved</option>
+                            <option>Pending</option>
+                            <option>Banned</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>AdminUser@example.com</td>
+                    <td>Admin</td>
+                    <td>
+                        <select>
+                            <option>Banned</option>
+                            <option>Pending</option>
+                            <option>Banned</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>EmilyClark@example.com</td>
+                    <td>Teacher</td>
+                    <td>
+                        <select>
+                            <option>Pending</option>
+                            <option>Pending</option>
+                            <option>Banned</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MichaelBrown@example.com</td>
+                    <td>Student</td>
+                    <td>
+                        <select>
+                            <option>Approved</option>
+                            <option>Pending</option>
+                            <option>Banned</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>SophiaGreen@example.com</td>
+                    <td>Teacher</td>
+                    <td>
+                        <select>
+                            <option>Approved</option>
+                            <option>Pending</option>
+                            <option>Banned</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <a class="nav-link text-dark" href="/Identity/Account/Login">Sign Out</a>
+    </div>
+</body>
+</html>

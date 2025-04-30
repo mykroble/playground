@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextFromCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="From City"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/editTextToCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="To City"
+        android:inputType="text"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextDepartureDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Departure Date"
+        android:focusable="false"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextReturnDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Return Date (Optional)"
+        android:focusable="false"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/buttonSearchFlights"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search Flights"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
