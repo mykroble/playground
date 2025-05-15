@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Vertical container -->
+    <LinearLayout
+        android:id="@+id/formContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/backbtn" />
+
+        <LinearLayout
+            android:id="@+id/signupRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <ImageButton
+                android:id="@+id/companyLogo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/companylogo_sample" />
+
+            <TextView
+                android:id="@+id/poster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:text="User"
+                android:textColor="#FFAAAA"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/jobTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Title"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Construction Worker"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/buttonRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/applyBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="Apply" />
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="Save" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/aboutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About The Job"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/aboutDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You will be an essential part of a team working on various types of construction projects, from residential buildings to commercial structures, infrastructure, and other construction-related tasks."
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+
+    </LinearLayout>
+
+    <!-- Bottom wave -->
+    <ImageView
+        android:id="@+id/waveBg"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bottom_wave"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <View
+        android:id="@+id/loading_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <ProgressBar
+        android:id="@+id/loading_spinner"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

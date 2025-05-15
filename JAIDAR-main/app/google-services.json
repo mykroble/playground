@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "395712955530",
+    "project_id": "jaidar-3b464",
+    "storage_bucket": "jaidar-3b464.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395712955530:android:2870195c34d6fb4b9b5973",
+        "android_client_info": {
+          "package_name": "ph.edu.usc.jaidar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1tyv_IFUTXjoVxtUCQ3gpPEOielDcMXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

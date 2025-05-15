@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView android:id="@+id/workerTitle"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Title" android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <TextView android:id="@+id/workerRate"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Rate" android:layout_marginTop="4dp" />
+
+    <TextView android:id="@+id/workerTag"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Tag" android:layout_marginTop="4dp" />
+
+    <TextView android:id="@+id/posterName"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Posted by: " android:layout_marginTop="4dp" />
+
+    <TextView android:id="@+id/workerDescription"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Description"
+        android:layout_marginTop="12dp" />
+
+    <Button android:id="@+id/offer_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="Send Offer!" />
+
+</LinearLayout>

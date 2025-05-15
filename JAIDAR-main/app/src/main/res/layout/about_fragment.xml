@@ -1,0 +1,138 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/editBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white"
+            android:paddingHorizontal="24dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Location Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/purple_100">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:text="Location"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#4B0082"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/locationInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter location"
+                    android:enabled="false"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/black"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Background Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/purple_100">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Background"
+                    android:textStyle="bold"
+                    android:textColor="#4B0082"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/backgroundInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="3"
+                    android:gravity="top"
+                    android:enabled="false"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/black"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Experience Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/purple_100">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:text="Experience"
+                    android:textStyle="bold"
+                    android:textColor="#4B0082"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/experienceInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="3"
+                    android:gravity="top"
+                    android:enabled="false"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/black"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Changes"
+            android:visibility="gone"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/purple_500"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+</ScrollView>
